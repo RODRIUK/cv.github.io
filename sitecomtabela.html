@@ -1,0 +1,651 @@
+<html>
+    <head>
+        <title></title> 
+        <style>
+
+            html {
+                scroll-behavior: smooth;
+            }
+        
+         * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+         }
+
+
+        
+            body {
+               background-color: #0e0f10;
+               color: antiquewhite;
+               font-family: 'Poppins', sans-serif;
+
+            }
+
+            .tabela-principal {
+                width: 100%;
+                height: 100%;
+                border-collapse: collapse;
+            }
+
+            .cabeçalho {
+                background: black;
+                color:white;
+                height: 200px;
+            }
+
+            .menu {
+                width:10%;
+                background: rgb(27, 27, 27);
+                padding: 20px;
+                vertical-align: top;
+                text-align: center;
+                position: fixed;
+                height: 100%;
+            }
+
+            .table-body {
+                padding-left: 25%;
+                padding-right: 15%;
+                vertical-align: top;
+            }
+
+            .title {
+                margin-top: 50px;
+                margin-bottom: 50px;
+                text-align: center;
+
+            }
+
+            .card-box {
+                display: flex;
+                
+            }
+            
+            .card-box-img img {
+                height: 200px;
+                border-radius: 50%;
+            }
+
+            .card-box-body {
+                margin-left: 20px;
+                text-align: justify;
+                
+            }
+
+            .menu p{
+                margin-bottom: 30px;
+            }
+
+            .menu a{
+                color:white;
+                text-decoration: none;
+            }
+
+            .menu i{
+                font-size: 30px;
+            }
+
+            .menu a:hover{
+                color: #0FFF50;
+            }
+
+            .menu .logo{
+                font-size: 40px;
+                font-weight: 600;
+                border-bottom: 5px solid #0FFF50;
+            }
+
+            .service-container {
+                display: flex;
+                flex-wrap: wrap;
+
+
+            }
+
+            .service-container .service-item {
+                width: calc( 33.33% - 32px);
+                /*margin-bottom: 16px;*/
+                margin: 16px;
+            }
+
+            .service-container .service-item .service-item-card {
+                background-color: #070708;
+                border: 1px solid #0e0f10;
+                border-radius: 16px;
+                height: 300px;
+                padding: 40px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+            }
+
+            .service-container .service-item .service-item-card:hover{
+                border: 1px solid #0FFF50;
+            }
+            
+
+            
+
+            .service-container .service-item .service-item-card .service-item-card-icon {
+                background-color: #0e0f10;
+                height: 80px;
+                border: 1px solid #0e0f10;
+                width: 80px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .service-container .service-item .service-item-card .service-item-card-icon:hover{
+                border: 2px solid #0FFF50;
+            }
+
+            .service-container .service-item .service-item-card .service-item-card-icon {
+                font-size: 30px;
+            }
+
+            .service-container .service-item .service-item-card .service-item-card-title {
+                margin-top: 16px;
+                margin-bottom: 16px;
+                 
+            }
+
+            .service-container .service-item .service-item-card .service-item-card-description  {
+                text-align: center;
+            }
+
+            .flexbox {
+                display: flex;
+                gap: 30px;
+
+            }
+
+            .flexbox-item {
+                display: 50%;
+            }
+
+            .card {
+                background: #070708;
+                padding: 30px;
+                border-radius: 8px; 
+            }
+             
+            .timeline-item{
+                margin-bottom: 30px;
+                border-left: 1px solid #0FFF50;
+                padding-left: 32px;
+                position: relative;
+                 
+            }
+
+            .timeline-item-period{
+                font-size: 12px;
+                color:#0FFF50;
+                margin-top: 8px;
+                margin-bottom: 8px;
+            }
+
+            .timeline-item-marker{
+                display: flex;
+                align-items: center;
+                position: absolute;
+                top: 10px;
+                left: -10;
+                /* bottom: 10px; */
+            }
+
+            .timeline-item-marker-circle {
+                height: 15px;
+                width: 15px;
+                background: #0FFF50;
+                border-radius: 50%;
+            }
+
+            .timeline-item-marker-line {
+                height: 1px;
+                width: 20px;
+                background: #0FFF50;
+            }
+            
+            #aboutMeSection, #experiencesection #contactSection {
+                scroll-margin-top: 50px;
+            }
+
+            .progress-bar{
+                background-color: #0e0f10;
+                height: 8px;
+                border-radius: 8px;
+                position: relative;
+                margin-bottom: 60px;
+            }
+
+            .progress-bar-done {
+                background: #0FFF50;
+                height: 100%;
+                border-radius: 8px;
+                position: relative;
+            }
+
+            .progress-bar-done-check {
+                height: 20px;
+                width: 20px;
+                border: 4px solid #0FFF50;
+                border-radius: 50%;
+                position: absolute;
+                right: 0px;
+                top: -6px;
+                background-color: #0e0f10;
+
+            }
+
+            .progress-bar-title {
+                position: absolute;
+                top: -30px;
+            }
+
+            .progress-bar-done-text {
+                position: absolute;
+                top: -30px;
+                right: 0px;
+
+            }
+
+            .padding-top-60 {
+                padding-top: 60px;
+            }
+
+            .contact-item {
+                text-align: center;
+                flex-direction: column;
+                width: 30%;
+                align-items: center;
+                gap: 20px;
+            }
+            .contact-item-icon {
+                font-size: 40px;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .contact-item-value a{
+                color: white;
+                text-decoration: none;
+            }
+        
+            .contact-item-value a:hover {
+                text-decoration: underline;
+            }      
+        </style>
+
+        <enlace rel="preconectar" href="https://fonts.googleapis.com">
+        <enlace rel="preconectar" href="https://fonts.gstatic.com" crossorigin>
+        <enlace href="https: //fonts.googleapis.com/css2? familia= Poppins:peso@300;400;500;600 & display=swap" rel="stylesheet">
+      
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel=stylesheet>
+
+    </head>
+    <body>
+
+      
+
+       <table class="tabela-principal" >     
+           
+           <tr>
+                <td class="menu" >
+                    <p class="logo">
+                        CV
+                    </p>
+                 <p>              
+                    <a href="#aboutMeSection">
+                        <i class="fa-sharp fa-solid fa-user-tie"></i>
+                        
+                    </a>
+                 </p> 
+                 <p>
+                    <a href="#experienceSection">
+                        <i class="fa-solid fa-address-book"></i>
+                        
+                    </a>
+                 </p>
+                 <p>   
+                    <a href="#contactSection">
+                        <i class="fa-solid fa-envelope"></i>
+                        
+                    </a>
+                 </p>   
+                </td>
+             <td class="table-body ">
+                <div id="aboutMeSection" style=" padding-bottom: 3opx;min-height: 1000px;">
+                    <h1 class="title">About Me</h1>
+                 <div class="card-box card">
+                    <div class="card-box-img">
+                        
+                            <img src="./img/IMG_2492.JPG" />
+                        </div>
+                     <div class="card-box-body">
+                         <h3>Rodrigo cardoso</h3>
+                         <p>Belfast Northern Ireland</p>
+                         <p>
+                            Good Morning! My name is Rodrigo Cardoso and I am a Screen Printing Technician with more than 10 years of professional experience and I have worked on several projects since then. I am currently studying for work
+                                as a Full Stack and Mobile developer. Today I live in the city of Belfast in Northern Ireland.
+                         </p>
+                     </div>
+                    </div>
+                    <h2 class="title">AREAS DE ATUAÇAO</h2>
+                    <div class="service-container">
+                        <div class="service-item">
+                            <div class="service-item-card">
+                                <div class="service-item-card-icon">
+                                    <i class="fa-solid fa-display"></i>
+                                </div>
+                                <div class="service-item-card-title">
+                                    <h3>Front End Developer</h3>
+                                </div>
+                                <div class="service-card-description">
+                                    <span>Html, Javascript (Angular, JQuery, React), Css...</span>
+                                </div>
+                            </div>   
+                        </div>
+                        <div class="service-item">
+                            <div class="service-item-card">
+                                <div class="service-item-card-icon">
+                                    <i class="fa-solid fa-gears"></i>
+                                </div>
+                                <div class="service-item-card-title">
+                                    <h3>Back End Developer</h3>
+                                </div>
+                                <div class="service-card-description">
+                                    <span>Node, PHP(Zend Framework, Slim Framework, Laravel), Java, etc...</span>
+                                </div>
+                            </div>   
+                        </div>
+                        
+                        <div class="service-item">
+                            <div class="service-item-card">
+                                <div class="service-item-card-icon">
+                                    <i class="fa-solid fa-database"></i>
+                                </div>
+                                <div class="service-item-card-title">
+                                    <h3>Data Modeling</h3>
+                                </div>
+                                <div class="service-card-description">
+                                    <span>MySQL, PostGres, etc...</span>
+                                </div>
+                            </div>   
+                        </div>
+                        <div class="service-item">
+                            <div class="service-item-card">
+                                <div class="service-item-card-icon">
+                                    <i class="fa-sharp fa-solid fa-gears"></i>
+                                </div>
+                                <div class="service-item-card-title">
+                                    <h3>Other</h3>
+                                </div>
+                                <div class="service-card-description">
+                                    <span>Pentaho BI Solutions, MetaQuotes, R Studio</span>
+                                </div>
+                            </div>   
+                        </div>
+                    </div>
+                 </div>
+                </div>
+                <div id="experienceSection">
+                    <h1 class="title">Resumo</h1>
+                    <div class="flexbox">
+                        <div class="flexbox-item">
+                            <h2 class="title ">Experience </h2>
+                            <div class="card">
+
+                                <div class="timeline-item">
+                                    <div class="timeline-item-marker">
+                                        <div class="timeline-item-marker-circle">
+
+                                        </div>
+                                        <div class="timeline-item-marker-line">
+
+                                        </div>
+                                    </div>
+                                    <h3>Full Stack Developer | Mobile</h3>
+                                    <p class="timeline-item-period">
+                                        <i class="fa-solid fa-calendar-days"></i> 2018 - December 2019 | Beepay
+                                    </p>
+                                    Delastek(Shawinigan) - Technicien Informatique: Responsable pour preparer nouveau poste de travail . Centre d’appel aux employés \ Intranet – Slack ; Fournir un soutien aux employés et résoudre les problèmes informatiques techniques par courriel, téléphonie
+                                    et à distance ( Anydesk ); Rapport d`inventaire du matériel informatique / ArcServer - Backup; Configuration des Imprimantes, Réseau et préparation de nouveau poste de travail; Gestion de l’accès, configuration et mise
+                                    à jour Windows 10 et 11; Application bureautique tels Office Pro 2013 à Office 365; Administrateur actif du compte utilisateur Active Directory Windows Server 2018, 2019; Système de taches – ClickUP, BitWarden etc.
+
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-item-marker">
+                                        <div class="timeline-item-marker-circle">
+
+                                        </div>
+                                        <div class="timeline-item-marker-line">
+
+                                        </div>
+                                    </div>
+                                    <h3>Full Stack Developer | Mobile</h3>
+                                    <p class="timeline-item-period">
+                                        <i class="fa-solid fa-calendar-days"></i> 2018 - December 2019 | Beepay
+                                    </p>
+                                    Delastek(Shawinigan) - Technicien Informatique: Responsable pour preparer nouveau poste de travail . Centre d’appel aux employés \ Intranet – Slack ; Fournir un soutien aux employés et résoudre les problèmes informatiques techniques par courriel, téléphonie
+                                    et à distance ( Anydesk ); Rapport d`inventaire du matériel informatique / ArcServer - Backup; Configuration des Imprimantes, Réseau et préparation de nouveau poste de travail; Gestion de l’accès, configuration et mise
+                                    à jour Windows 10 et 11; Application bureautique tels Office Pro 2013 à Office 365; Administrateur actif du compte utilisateur Active Directory Windows Server 2018, 2019; Système de taches – ClickUP, BitWarden etc.
+
+
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-item-marker">
+                                        <div class="timeline-item-marker-circle">
+
+                                        </div>
+                                        <div class="timeline-item-marker-line">
+
+                                        </div>
+                                    </div>
+                                    <h3>Full Stack Developer | Mobile</h3>
+                                    <p class="timeline-item-period">
+                                        <i class="fa-solid fa-calendar-days"></i> 2018 - December 2019 | Beepay
+                                    </p>
+                                    Delastek(Shawinigan) - Technicien Informatique: Responsable pour preparer nouveau poste de travail . Centre d’appel aux employés \ Intranet – Slack ; Fournir un soutien aux employés et résoudre les problèmes informatiques techniques par courriel, téléphonie
+                                    et à distance ( Anydesk ); Rapport d`inventaire du matériel informatique / ArcServer - Backup; Configuration des Imprimantes, Réseau et préparation de nouveau poste de travail; Gestion de l’accès, configuration et mise
+                                    à jour Windows 10 et 11; Application bureautique tels Office Pro 2013 à Office 365; Administrateur actif du compte utilisateur Active Directory Windows Server 2018, 2019; Système de taches – ClickUP, BitWarden etc.
+
+
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-item-marker">
+                                        <div class="timeline-item-marker-circle">
+
+                                        </div>
+                                        <div class="timeline-item-marker-line">
+
+                                        </div>
+                                    </div>
+                                    <h3>Full Stack Developer | Mobile</h3>
+                                    <p class="timeline-item-period">
+                                        <i class="fa-solid fa-calendar-days"></i> 2018 - December 2019 | Beepay
+                                    </p>
+                                    Delastek(Shawinigan) - Technicien Informatique: Responsable pour preparer nouveau poste de travail . Centre d’appel aux employés \ Intranet – Slack ; Fournir un soutien aux employés et résoudre les problèmes informatiques techniques par courriel, téléphonie
+                                    et à distance ( Anydesk ); Rapport d`inventaire du matériel informatique / ArcServer - Backup; Configuration des Imprimantes, Réseau et préparation de nouveau poste de travail; Gestion de l’accès, configuration et mise
+                                    à jour Windows 10 et 11; Application bureautique tels Office Pro 2013 à Office 365; Administrateur actif du compte utilisateur Active Directory Windows Server 2018, 2019; Système de taches – ClickUP, BitWarden etc.
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="flexbox-item">
+                            <h2 class="title">
+                                Educacao
+                            </h2>
+                            <div class="card">
+                                <div class="timeline-item">
+                                    <div class="timeline-item-marker">
+                                        <div class="timeline-item-marker-circle">
+
+                                        </div>
+                                        <div class="timeline-item-marker-line">
+
+                                        </div>
+                                    </div>
+                                    <h3>Graduate</h3>
+                                    <p class="timeline-item-period">
+                                        <i class="fa-solid fa-calendar-days"></i> 2003 - December 2016 | Administrarion des affaires
+                                    </p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <h2 class="title ">Technologies:</h2>
+                    <div class="card padding-top-60">
+                       <div class="progress-bar">
+                           <div class="progress-bar-title">
+                                PHP
+                           </div>
+                           
+                           <div class="progress-bar-done" style="width:60%">
+                            <div class="progress-bar-done-text">
+                                60%
+                           </div>
+                           <div class="progress-bar-done-check">
+
+                           </div>
+                                  
+                           </div>
+
+                       </div>
+                       <div class="progress-bar">
+                        <div class="progress-bar-title">
+                             PHP
+                        </div>
+                        
+                        <div class="progress-bar-done">
+                         <div class="progress-bar-done-text">
+                             60%
+                        </div>
+                               
+                        </div>
+
+                    </div><div class="progress-bar">
+                        <div class="progress-bar-title">
+                             PHP
+                        </div>
+                        
+                        <div class="progress-bar-done">
+                         <div class="progress-bar-done-text">
+                             60%
+                        </div>
+                               
+                        </div>
+
+                    </div><div class="progress-bar">
+                        <div class="progress-bar-title">
+                             PHP
+                        </div>
+                        
+                        <div class="progress-bar-done">
+                         <div class="progress-bar-done-text">
+                             60%
+                        </div>
+                               
+                        </div>
+
+                    </div><div class="progress-bar">
+                        <div class="progress-bar-title">
+                             PHP
+                        </div>
+                        
+                        <div class="progress-bar-done">
+                         <div class="progress-bar-done-text">
+                             60%
+                        </div>
+                               
+                        </div>
+
+                    </div><div class="progress-bar">
+                        <div class="progress-bar-title">
+                             PHP
+                        </div>
+                        
+                        <div class="progress-bar-done">
+                         <div class="progress-bar-done-text">
+                             60%
+                        </div>
+                               
+                        </div>
+
+                    </div>
+                    </div>
+                </div>
+                <div id="contactSection" style="height: 1000px;">
+                    <h1 class="title">Contact</h1>
+                    <div class="card flexbox">
+                        <div class="contact-item flexbox">
+                            <div class="contact-item-icon">
+                                <i class="fas fa-paper-plane"></i>
+                            </div>
+                            <div class="contact-item-value">
+                                <a href="mailto:rodrigocarduk@gmail.com">
+                                        rodrigocarduk@gmail.com
+                                    </a>
+                            </div>
+                            <div class="contact-item-description">
+                                Email 
+                            </div>
+                        </div>
+                        <div class="contact-item flexbox">
+                            <div class="contact-item-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="contact-item-value">
+                                <a target="_blank" href="https://www.linkedin.com/in/rodrigo-c-967048262/">
+                                        Rodrigo Cardoso
+                                    </a>
+                            </div>
+                            <div class="contact-item-description">
+                                Linkedin
+                            </div>
+                        </div>
+                        <div class="contact-item flexbox">
+                            <div class="contact-item-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-item-value">
+                                +44 7824964840
+                            </div>
+                            <div class="contact-item-description">
+                                Phone
+                            </div>
+                        </div>
+                        <div class="contact-item flexbox">
+                            <div class="contact-item-icon">
+                                <i class="fab fa-Whatsapp"></i>
+                            </div>
+                            <div class="contact-item-value">
+                                <a target="_blank" href="https://chat.whatsapp.com/KInL7ITxkN7AAyNhQRsdmF">
+                                    Whatsapp
+                                    </a>
+                            </div>
+                            <div class="contact-item-description">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </td>    
+        
+                </div>
+            </div>
+        </body>
+        
+        </html>
